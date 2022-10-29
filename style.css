@@ -1,0 +1,59 @@
+td {
+    border: 2px solid #333;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 70px;
+    cursor: pointer;
+}
+
+table {
+    /*Removes ugly double lines from the table*/
+    border-collapse: collapse;
+    position: absolute;
+    left: 50%;
+    /* All this stuff is to center the board.
+    .  Without the margin left, it takes the top 
+    .  left corner of the table and centers that.
+    .  We want the whole thing centered. The table is 
+    .  310px wide, so divide that by 2, and get the center
+    .  position: 155px.*/
+    margin-left: -155px;
+    /*this is just to give some space at the top*/
+    top: 50px;
+}
+
+table tr:first-child td {
+    border-top: 0;
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+/*Selects every child tr, and the first td*/
+table tr td:first-child {
+    border-left: 0;
+}
+
+table tr td:last-child {
+    border-right: 0;
+}
+
+.endgame {
+    /*The display is set to none so we don't see it until the end of the game*/
+    display: none;
+    width: 200px;
+    top: 120px;
+    background-color: rgba(205, 133, 63, 0.8);
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 2em;
+}
